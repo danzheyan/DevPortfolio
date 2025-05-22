@@ -1,6 +1,9 @@
 import React from 'react'
 import { words } from '../constants/index.js'
 import { Button } from '../components/Button.jsx'
+import { HeroExperience } from '../components/HeroModels/HeroExperience.jsx'
+import { useGSAP } from '@gsap/react'
+import { gsap } from 'gsap'
 
 const Hero = () => {
   return (
@@ -10,6 +13,7 @@ const Hero = () => {
         </div>
 
         <div className="hero-layout">
+            {/* left header text  */}
             <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
                 <div className="flex flex-col gap-7">
                     <div className="hero-text">
@@ -30,15 +34,29 @@ const Hero = () => {
                                 </span>
                             </span>
                         </h1>
-                        <h1>into Real Results</h1>
+
+                        <h1>Into Real Results</h1>
                         {/* <h1>that Deliver Results</h1> */}
                     </div>
                     <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
                         Hi, I'm Dan!
                     </p>
-                    <Button />
+                    {/* // define here ince different buttons diff styles */}
+                    <Button 
+                        className="md:w-80 md:h-16 w-60 h-12"
+                        id="button"
+                        text="See my work"
+                    />
                 </div>
             </header>
+
+            {/* right image model */}
+            {/* figure: self contained content like image or model for seo*/}
+            <figure>
+                <div className="hero-3d-layout">
+                  <HeroExperience />
+                </div>
+            </figure>
         </div>
     </section>
   )
