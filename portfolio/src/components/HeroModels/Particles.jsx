@@ -13,7 +13,7 @@ export const Particles = ({ count = 200 }) => {
           Math.random() * 10 + 5, // higher starting point
           (Math.random() - 0.5) * 10,
         ],
-        speed: 0.005 + Math.random() * .05,
+        speed: 0.005 + Math.random() * .03,
       });
     }
     return temp;
